@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTs AL-Munthohir - Kabupaten Cirebon</title>
+    <link rel="preconnect" href="https://fonts.qwenlm.ai" />
+    <link href="https://fonts.qwenlm.ai/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#beranda" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <img src="assets/images/logo_AM.png" alt="" srcset="">
+                </div>
+                <div class="nav-brand-text">
+                    <h1>MTs AL-Munthohir</h1>
+                    <span>Kabupaten Cirebon</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#beranda" class="active">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="news.html">Berita</a></li>
+                <li><a href="ppdb.html">PPDB</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+                <i class="fas fa-bars" id="mobileIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1 parallax-element" data-speed="0.03"></div>
+            <div class="hero-shape hero-shape-2 parallax-element" data-speed="-0.02"></div>
+            <div class="hero-shape hero-shape-3 parallax-element" data-speed="0.05"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Mewujudkan Generasi Berakhlak, Berilmu, dan Berprestasi</h2>
+                <h1>Selamat Datang di <br><span class="highlight">MTs AL-Munthohir</span></h1>
+                <p>Pusat informasi madrasah yang menghadirkan berbagai kegiatan, prestasi, serta layanan pendidikan yang berkualitas untuk masa depan generasi bangsa.</p>
+                <div class="hero-buttons">
+                    <a href="#ppdb" class="btn btn-primary"><i class="fas fa-user-plus"></i> Daftar PPDB</a>
+                    <a href="#profil" class="btn btn-outline"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-wrapper">
+                    <img src="https://image.qwenlm.ai/public_source/4b09e9a6-0153-4d1e-bede-f1a29a056e3f/18b4ffe0e-c4aa-4ba7-9adb-c703197474b5.png" alt="MTs AL-Munthohir">
+                </div>
+                <div class="hero-float-card card-1">
+                    <div class="float-card-number" data-count="150">0</div>
+                    <div class="float-card-label">Total Siswa</div>
+                </div>
+                <div class="hero-float-card card-2">
+                    <div class="float-card-number" data-count="15">0</div>
+                    <div class="float-card-label">Tenaga Pengajar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Carousel -->
+    <section class="quote-section">
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide active">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Menuntut ilmu itu kewajiban bagi setiap muslim, baik laki-laki maupun perempuan. Ilmu adalah cahaya yang menerangi jalan kehidupan."</p>
+                    <p class="quote-author">— Hadis Riwayat Abu Daud</p>
+                </div>
+                <div class="carousel-slide">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya. Pendidikan adalah kunci untuk memberikan manfaat."</p>
+                    <p class="quote-author">— Prinsip Islam</p>
+                </div>
+                <div class="carousel-slide">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Barangsiapa yang menempuh perjalanan untuk menuntut ilmu, maka Allah akan mudahkan baginya jalan menuju surga."</p>
+                    <p class="quote-author">— HR. Muslim</p>
+                </div>
+                <div class="carousel-slide">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">"Ilmu tanpa amal seperti pohon tanpa buah. Amal tanpa ilmu tidak diterima. Maka seimbangkan keduanya dalam kehidupan."</p>
+                    <p class="quote-author">— Nasihat Ulama</p>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- Sambutan Kepala Madrasah -->
+    <section class="section sambutan-section parallax-section" id="sambutan">
+        <div class="parallax-bg" style="background: linear-gradient(135deg, var(--soft-bg), var(--main-bg)); opacity: 0.5;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Sambutan</span>
+                <h2 class="section-title">Sambutan Kepala Madrasah</h2>
+            </div>
+            <div class="sambutan-grid">
+                <div class="sambutan-photo animate-on-scroll animate-left">
+                    <div class="sambutan-photo-img">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--primary),var(--dark));display:flex;align-items:center;justify-content:center;flex-direction:column;color:white;">
+                            <i class="fas fa-user-tie" style="font-size:80px;margin-bottom:16px;opacity:0.5;"></i>
+                            <p style="font-size:14px;opacity:0.7;text-align:center;padding:0 20px;">Agung Oktriadi, S.S.<br>Kepala Madrasah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sambutan-content animate-on-scroll animate-right">
+                    <h3>Agung Oktriadi, S.S</h3>
+                    <p class="role">Kepala Madrasah Tsanawiyah AL-Munthohir</p>
+                    <p>Assalamu'alaikum Warahmatullahi Wabarakatuh. Puji syukur kita panjatkan kehadirat Allah SWT atas segala rahmat dan karunia-Nya. Website resmi MTs AL-Munthohir hadir sebagai media informasi dan komunikasi antara sekolah dengan seluruh stakeholders.</p>
+                    <p>Kami berkomitmen untuk terus meningkatkan kualitas pendidikan yang memadukan kurikulum nasional dengan nilai-nilai keislaman, mencetak generasi yang berakhlak mulia, berilmu pengetahuan, dan berprestasi.</p>
+                    <p>Mari bersama-sama kita dukung kemajuan pendidikan di MTs AL-Munthohir demi masa depan generasi bangsa yang lebih cerah. Wallahu'alam bishawab.</p>
+                    <p style="font-weight:700;margin-top:16px;">Wassalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item animate-on-scroll stagger-1">
+                    <h3><span class="counter" data-target="150">0</span>+</h3>
+                    <p>Siswa Aktif</p>
+                </div>
+                <div class="counter-item animate-on-scroll stagger-2">
+                    <h3><span class="counter" data-target="15">0</span></h3>
+                    <p>Tenaga Pengajar</p>
+                </div>
+                <div class="counter-item animate-on-scroll stagger-3">
+                    <h3><span class="counter" data-target="5">0</span>+</h3>
+                    <p>Ekstrakurikuler</p>
+                </div>
+                <div class="counter-item animate-on-scroll stagger-4">
+                    <h3><span class="counter" data-target="30">0</span>+</h3>
+                    <p>Prestasi Diraih</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ekstrakurikuler -->
+    <section class="section ekskul-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Pengembangan Diri</span>
+                <h2 class="section-title">Ekstrakurikuler</h2>
+                <p class="section-desc">Beragam kegiatan untuk mengembangkan bakat dan minat siswa</p>
+            </div>
+            <div class="ekskul-grid">
+                <div class="ekskul-card animate-on-scroll stagger-1">
+                    <div class="ekskul-icon"><i class="fas fa-flag"></i></div>
+                    <h4>PASKIBRA</h4>
+                    <p>Pasca Pasukan Pengibar Bendera Pusaka untuk melatih disiplin dan kebangsaan</p>
+                </div>
+                <div class="ekskul-card animate-on-scroll stagger-2">
+                    <div class="ekskul-icon"><i class="fas fa-campground"></i></div>
+                    <h4>Pramuka</h4>
+                    <p>Kegiatan kepanduan untuk membentuk karakter kepemimpinan dan kemandirian</p>
+                </div>
+                <div class="ekskul-card animate-on-scroll stagger-3">
+                    <div class="ekskul-icon"><i class="fas fa-drum"></i></div>
+                    <h4>Drumband</h4>
+                    <p>Wadah kreativitas dalam bermusik dan baris-berbaris secara bersama</p>
+                </div>
+                <div class="ekskul-card animate-on-scroll stagger-4">
+                    <div class="ekskul-icon"><i class="fas fa-music"></i></div>
+                    <h4>Hadrroh</h4>
+                    <p>Seni musik islami yang mempererat ukhuwah dan kreativitas siswa</p>
+                </div>
+                <div class="ekskul-card animate-on-scroll stagger-5">
+                    <div class="ekskul-icon"><i class="fas fa-running"></i></div>
+                    <h4>Olahraga</h4>
+                    <p>Futsal, basket, bulu tangkis, dan cabang olahraga lainnya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas -->
+    <section class="section fasilitas-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Sarana & Prasarana</span>
+                <h2 class="section-title">Fasilitas Sekolah</h2>
+                <p class="section-desc">Sarana dan prasarana lengkap untuk mendukung proses belajar mengajar</p>
+            </div>
+            <div class="fasilitas-grid">
+                <div class="fasilitas-card animate-on-scroll stagger-1">
+                    <div class="fasilitas-card-icon"><i class="fas fa-bus"></i></div>
+                    <h4>Antar-Jemput Gratis</h4>
+                    <p>Layanan antar-jemput gratis tersedia untuk siswa dari luar desa Putat, memastikan perjalanan aman dan nyaman.</p>
+                </div>
+                <div class="fasilitas-card animate-on-scroll stagger-2">
+                    <div class="fasilitas-card-icon"><i class="fas fa-mosque"></i></div>
+                    <h4>Masjid Sekolah</h4>
+                    <p>Masjid sekolah menyediakan ruang ibadah nyaman untuk sholat berjamaah, memperkuat iman dan karakter religius siswa.</p>
+                </div>
+                <div class="fasilitas-card animate-on-scroll stagger-3">
+                    <div class="fasilitas-card-icon"><i class="fas fa-laptop"></i></div>
+                    <h4>Lab Komputer</h4>
+                    <p>Lab komputer modern dengan perangkat terkini mendukung pembelajaran teknologi informasi dan keterampilan digital siswa.</p>
+                </div>
+                <div class="fasilitas-card animate-on-scroll stagger-4">
+                    <div class="fasilitas-card-icon"><i class="fas fa-book-open"></i></div>
+                    <h4>Perpustakaan</h4>
+                    <p>Perpustakaan lengkap dengan koleksi buku beragam menciptakan suasana kondusif untuk membangkitkan minat baca siswa.</p>
+                </div>
+                <div class="fasilitas-card animate-on-scroll stagger-5">
+                    <div class="fasilitas-card-icon"><i class="fas fa-volleyball-ball"></i></div>
+                    <h4>Lapangan Olahraga</h4>
+                    <p>Lapangan olahraga luas dan terawat mendukung aktivitas fisik dan pembinaan prestasi olahraga siswa berbagai cabang.</p>
+                </div>
+                <div class="fasilitas-card animate-on-scroll stagger-6">
+                    <div class="fasilitas-card-icon"><i class="fas fa-shower"></i></div>
+                    <h4>MCK Bersih</h4>
+                    <p>Kamar mandi bersih dan memadai tersedia untuk menjaga kesehatan dan kenyamanan seluruh siswa di sekolah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-mosque"></i> MTs AL-Munthohir</h3>
+                    <p>Madrasah Tsanawiyah AL-Munthohir Kabupaten Cirebon. Mewujudkan generasi yang beriman, berilmu, berakhlak mulia, dan berprestasi.</p>
+                    <p style="font-size:13px;">
+                        <strong>NPSN:</strong> 20278858<br>
+                        <strong>Alamat:</strong> Jl. Putat-Belawa Rt 002/004, Dusun 2, Desa Putat, Kec. Sedong, Kab. Cirebon, Jawa Barat
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#profil">Profil</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#ppdb">PPDB</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Profil</h4>
+                    <ul>
+                        <li><a href="#profil">Visi & Misi</a></li>
+                        <li><a href="#profil">Sejarah</a></li>
+                        <li><a href="#profil">Struktur Organisasi</a></li>
+                        <li><a href="#profil">Dewan Guru</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#ppdb">PPDB Online</a></li>
+                        <li><a href="#">E-Learning</a></li>
+                        <li><a href="#">Rapor Online</a></li>
+                        <li><a href="#">Blog Sekolah</a></li>
+                        <li><a href="#">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MTs AL-Munthohir. All Rights Reserved. | Al-Munthohir Official</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-sign-in-alt"></i> Login Admin</h2>
+            <p>Masuk ke dashboard administrator</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn-submit"><i class="fas fa-sign-in-alt"></i> Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" style="position:fixed;top:24px;right:24px;background:var(--primary);color:white;padding:16px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:3000;transform:translateX(120%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;gap:10px;"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+

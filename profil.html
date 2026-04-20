@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTs AL-Munthohir - Kabupaten Cirebon</title>
+    <link rel="preconnect" href="https://fonts.qwenlm.ai" />
+    <link href="https://fonts.qwenlm.ai/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="exnavbar">
+        <div class="container">
+            <a href="#profil" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <img src="assets/images/logo_AM.png" alt="" srcset="">
+                </div>
+                <div class="nav-brand-text">
+                    <h1>MTs AL-Munthohir</h1>
+                    <span>Kabupaten Cirebon</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html" class="active">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="news.html">Berita</a></li>
+                <li><a href="ppdb.html">PPDB</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+                <i class="fas fa-bars" id="mobileIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Profil Section -->
+    <section class="section profil-section" id="profil">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div id="span-mobile"></div>
+                <span class="section-badge">Tentang Kami</span>
+                <h2 class="section-title">Profil Madrasah</h2>
+                <p class="section-desc">Mengenal lebih dekat MTs AL-Munthohir Kabupaten Cirebon</p>
+            </div>
+            <div class="profil-tabs animate-on-scroll">
+                <button class="profil-tab active" onclick="switchTab('visimisi')">Visi & Misi</button>
+                <button class="profil-tab" onclick="switchTab('sejarah')">Sejarah</button>
+                <button class="profil-tab" onclick="switchTab('struktur')">Struktur Organisasi</button>
+                <button class="profil-tab" onclick="switchTab('dewan')">Dewan Guru</button>
+            </div>
+
+            <!-- Visi & Misi -->
+            <div class="profil-content active" id="tab-visimisi">
+                <div class="visi-misi-grid">
+                    <div class="visi-card animate-on-scroll stagger-1">
+                        <h3><i class="fas fa-eye"></i> Visi</h3>
+                        <p>"Mewujudkan generasi yang beriman, berilmu, berakhlak mulia, dan berprestasi berdasarkan Al-Quran dan As-Sunnah."</p>
+                        <p style="margin-top:12px;">Madrasah tsanawiyah yang unggul dalam IMTAQ dan IPTEK, mandiri, dan berwawasan lingkungan.</p>
+                    </div>
+                    <div class="misi-card animate-on-scroll stagger-2">
+                        <h3><i class="fas fa-bullseye"></i> Misi</h3>
+                        <ul>
+                            <li>Menegakkan nilai-nilai keislaman dalam kehidupan sehari-hari</li>
+                            <li>Menyelenggarakan pendidikan berkualitas sesuai standar nasional</li>
+                            <li>Mengembangkan potensi akademik dan non-akademik siswa</li>
+                            <li>Membangun karakter kepemimpinan dan kemandirian</li>
+                            <li>Menciptakan lingkungan belajar yang kondusif dan islami</li>
+                            <li>Memperluas wawasan teknologi informasi siswa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sejarah -->
+            <div class="profil-content" id="tab-sejarah">
+                <div class="sejarah-timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-year">Awal Pendirian</div>
+                            <h4>Diribatkannya MTs AL-Munthohir</h4>
+                            <p>MTs AL-Munthohir didirikan oleh masyarakat Desa Putat dengan visi mendirikan madrasah unggulan di Kecamatan Sedong.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-year">Periode Pembangunan</div>
+                            <h4>Penambahan Ruang Kelas</h4>
+                            <p>Pembangunan gedung baru untuk menampung jumlah siswa yang terus bertambah dengan fasilitas yang memadai.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-year">Perkembangan Program</div>
+                            <h4>Program Tahfidz & Digital</h4>
+                            <p>Pengenalan program tahfidz Al-Quran dan laboratorium komputer untuk melengkapi kurikulum.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-year">Era Modern</div>
+                            <h4>Akreditasi & Prestasi</h4>
+                            <p>Meraih akreditasi dan berbagai prestasi di bidang akademik, olahraga, dan seni tingkat kabupaten.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-year">Ke Depan</div>
+                            <h4>Transformasi Digital Madrasah</h4>
+                            <p>Pengembangan website madrasah, sistem informasi akademik, dan peningkatan kualitas SDM pengajar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Struktur Organisasi -->
+            <div class="profil-content" id="tab-struktur">
+                <div class="struktur-grid">
+                    <div class="struktur-card animate-on-scroll stagger-1">
+                        <div class="struktur-avatar"><i class="fas fa-user-tie"></i></div>
+                        <h4>Agung Oktriadi, S.S</h4>
+                        <span>Kepala Madrasah</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-2">
+                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
+                        <h4>Dudi Ahmad, S.Pd</h4>
+                        <span>Wakil Kepala Kurikulum</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-3">
+                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
+                        <h4>Siti Rahmawati, S.Pd</h4>
+                        <span>Wakil Kepala Kesiswaan</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-4">
+                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
+                        <h4>Bambang Supriyadi, S.Pd</h4>
+                        <span>Wakil Kepala Sarana</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-5">
+                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
+                        <h4>Nur Halimah, S.Pd</h4>
+                        <span>Kepala Tata Usaha</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-6">
+                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
+                        <h4>Eko Prasetyo, S.Pd</h4>
+                        <span>Koordinator Litbang</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dewan Guru -->
+            <div class="profil-content" id="tab-dewan">
+                <div class="struktur-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+                    <div class="struktur-card animate-on-scroll stagger-1">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Agung Oktriadi, S.S</h4>
+                        <span>Bahasa Arab</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-2">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Dedi Kurniawan, S.Pd</h4>
+                        <span>Matematika</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-3">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Yuli Astuti, S.Pd</h4>
+                        <span>Bahasa Indonesia</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-4">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Rina Marlina, S.Pd</h4>
+                        <span>IPA</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-5">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Andi Firmansyah, S.Pd</h4>
+                        <span>IPS</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-6">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Ika Sari, S.Pd</h4>
+                        <span>Bahasa Inggris</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-5">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Fathur Rohman, S.Pdi</h4>
+                        <span>Aqidah Akhlak</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-6">
+                        <div class="struktur-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h4>Kholid Hasan, S.PdI</h4>
+                        <span>Fiqih</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-mosque"></i> MTs AL-Munthohir</h3>
+                    <p>Madrasah Tsanawiyah AL-Munthohir Kabupaten Cirebon. Mewujudkan generasi yang beriman, berilmu, berakhlak mulia, dan berprestasi.</p>
+                    <p style="font-size:13px;">
+                        <strong>NPSN:</strong> 20278858<br>
+                        <strong>Alamat:</strong> Jl. Putat-Belawa Rt 002/004, Dusun 2, Desa Putat, Kec. Sedong, Kab. Cirebon, Jawa Barat
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#profil">Profil</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#ppdb">PPDB</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Profil</h4>
+                    <ul>
+                        <li><a href="#profil">Visi & Misi</a></li>
+                        <li><a href="#profil">Sejarah</a></li>
+                        <li><a href="#profil">Struktur Organisasi</a></li>
+                        <li><a href="#profil">Dewan Guru</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#ppdb">PPDB Online</a></li>
+                        <li><a href="#">E-Learning</a></li>
+                        <li><a href="#">Rapor Online</a></li>
+                        <li><a href="#">Blog Sekolah</a></li>
+                        <li><a href="#">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MTs AL-Munthohir. All Rights Reserved. | Al-Munthohir Official</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-sign-in-alt"></i> Login Admin</h2>
+            <p>Masuk ke dashboard administrator</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn-submit"><i class="fas fa-sign-in-alt"></i> Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" style="position:fixed;top:24px;right:24px;background:var(--primary);color:white;padding:16px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:3000;transform:translateX(120%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;gap:10px;"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+

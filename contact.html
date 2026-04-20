@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTs AL-Munthohir - Kabupaten Cirebon</title>
+    <link rel="preconnect" href="https://fonts.qwenlm.ai" />
+    <link href="https://fonts.qwenlm.ai/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="exnavbar">
+        <div class="container">
+            <a href="#beranda" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <img src="assets/images/logo_AM.png" alt="" srcset="">
+                </div>
+                <div class="nav-brand-text">
+                    <h1>MTs AL-Munthohir</h1>
+                    <span>Kabupaten Cirebon</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="news.html">Berita</a></li>
+                <li><a href="ppdb.html">PPDB</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+                <i class="fas fa-bars" id="mobileIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Kontak -->
+    <section class="section kontak-section" id="kontak">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div id="span-mobile"></div>
+                <span class="section-badge">Hubungi Kami</span>
+                <h2 class="section-title">Kontak & Lokasi</h2>
+                <p class="section-desc">Silakan hubungi kami jika ada pertanyaan</p>
+            </div>
+            <div class="kontak-grid">
+                <div>
+                    <div class="kontak-info-list animate-on-scroll animate-left">
+                        <div class="kontak-info-item">
+                            <div class="kontak-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="kontak-info-text">
+                                <h4>Alamat</h4>
+                                <p>Jl. Putat-Belawa Rt 002/004 Blok Cikalapa, Dusun 02, Desa Putat, Kecamatan Sedong, Kabupaten Cirebon, Jawa Barat</p>
+                            </div>
+                        </div>
+                        <div class="kontak-info-item">
+                            <div class="kontak-info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="kontak-info-text">
+                                <h4>Telepon</h4>
+                                <p>(0231) xxxxxxx</p>
+                            </div>
+                        </div>
+                        <div class="kontak-info-item">
+                            <div class="kontak-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="kontak-info-text">
+                                <h4>Email</h4>
+                                <p>info@mtsalmunthohir.sch.id</p>
+                            </div>
+                        </div>
+                        <div class="kontak-info-item">
+                            <div class="kontak-info-icon"><i class="fas fa-clock"></i></div>
+                            <div class="kontak-info-text">
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Jumat: 07.00 - 15.00 WIB<br>Sabtu: 07.00 - 12.00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="kontak-info-item">
+                            <div class="kontak-info-icon"><i class="fas fa-id-card"></i></div>
+                            <div class="kontak-info-text">
+                                <h4>NPSN</h4>
+                                <p>20278858</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kontak-map animate-on-scroll animate-left stagger-2" style="margin-top:32px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63300.0!2d108.55!3d-6.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1b3c0c0c0c0c%3A0x0!2sSedong%2C+Cirebon+Regency%2C+West+Java!5e0!3m2!1sid!2sid!4v1704245000000" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="kontak-form animate-on-scroll animate-right">
+                    <h3><i class="fas fa-comment-dots"></i> Kirim Pesan</h3>
+                    <form onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subjek</label>
+                            <input type="text" placeholder="Subjek pesan" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Pesan</label>
+                            <textarea rows="5" placeholder="Tulis pesan Anda di sini..." required style="resize:vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-mosque"></i> MTs AL-Munthohir</h3>
+                    <p>Madrasah Tsanawiyah AL-Munthohir Kabupaten Cirebon. Mewujudkan generasi yang beriman, berilmu, berakhlak mulia, dan berprestasi.</p>
+                    <p style="font-size:13px;">
+                        <strong>NPSN:</strong> 20278858<br>
+                        <strong>Alamat:</strong> Jl. Putat-Belawa Rt 002/004, Dusun 2, Desa Putat, Kec. Sedong, Kab. Cirebon, Jawa Barat
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#profil">Profil</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#ppdb">PPDB</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Profil</h4>
+                    <ul>
+                        <li><a href="#profil">Visi & Misi</a></li>
+                        <li><a href="#profil">Sejarah</a></li>
+                        <li><a href="#profil">Struktur Organisasi</a></li>
+                        <li><a href="#profil">Dewan Guru</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#ppdb">PPDB Online</a></li>
+                        <li><a href="#">E-Learning</a></li>
+                        <li><a href="#">Rapor Online</a></li>
+                        <li><a href="#">Blog Sekolah</a></li>
+                        <li><a href="#">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MTs AL-Munthohir. All Rights Reserved. | Al-Munthohir Official</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-sign-in-alt"></i> Login Admin</h2>
+            <p>Masuk ke dashboard administrator</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn-submit"><i class="fas fa-sign-in-alt"></i> Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" style="position:fixed;top:24px;right:24px;background:var(--primary);color:white;padding:16px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:3000;transform:translateX(120%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;gap:10px;"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
