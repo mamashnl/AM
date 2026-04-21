@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTs AL-Munthohir - Kabupaten Cirebon</title>
-    <link rel="preconnect" href="https://fonts.qwenlm.ai" />
+    <title>Galeri Kegiatan - MTs AL-Munthohir</title>
     <link href="https://fonts.qwenlm.ai/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 <body>
 
     <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-spinner"></div>
-    </div>
+    <div class="page-loader" id="pageLoader"><div class="loader-spinner"></div></div>
 
     <!-- Navbar -->
     <nav class="navbar" id="exnavbar">
         <div class="container">
-            <a href="#beranda" class="nav-brand">
+            <a href="index.html" class="nav-brand">
                 <div class="nav-brand-icon">
-                    <img src="assets/images/logo_AM.png" alt="" srcset="">
+                    <img src="assets/images/logo_AM.png" alt="Logo AM">
                 </div>
                 <div class="nav-brand-text">
                     <h1>MTs AL-Munthohir</h1>
@@ -42,44 +39,221 @@
         </div>
     </nav>
 
-    <!-- Galeri -->
-    <section class="section galeri-section" id="galeri">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <div id="span-mobile"></div>
-                <span class="section-badge">Dokumentasi</span>
-                <h2 class="section-title">Galeri Kegiatan</h2>
-                <p class="section-desc">Momen-momen berharga dari kegiatan MTs AL-Munthohir</p>
+            <h1 class="animate-on-scroll stagger-1">Galeri <span class="hl">Kegiatan</span></h1>
+            <p class="animate-on-scroll stagger-2">Dokumentasi momen-momen berharga dari berbagai kegiatan dan aktivitas di MTs AL-Munthohir Kabupaten Cirebon.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Accordion Section -->
+    <section class="section galeri-section">
+        <div class="container">
+            <div class="filter-bar animate-on-scroll">
+                <button class="filter-btn active" onclick="filterGallery('all')">Semua</button>
+                <button class="filter-btn" onclick="filterGallery('keagamaan')">Keagamaan</button>
+                <button class="filter-btn" onclick="filterGallery('akademik')">Akademik</button>
+                <button class="filter-btn" onclick="filterGallery('olahraga')">Olahraga</button>
+                <button class="filter-btn" onclick="filterGallery('seni')">Seni & Kreativitas</button>
+                <button class="filter-btn" onclick="filterGallery('kegiatan')">Kegiatan Lainnya</button>
             </div>
-            <div class="galeri-grid">
-                <div class="galeri-item animate-on-scroll stagger-1">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#568259,#96E6B3);display:flex;align-items:center;justify-content:center;flex-direction:column;"><i class="fas fa-graduation-cap" style="font-size:64px;color:white;opacity:0.5;"></i><p style="color:white;font-size:14px;margin-top:8px;opacity:0.7;">Wisuda Tahfidz</p></div>
-                    <div class="galeri-overlay"><span>Wisuda Tahfidz Angkatan 5</span></div>
+            <div class="gallery-accordion" id="galleryAccordion">
+
+                <!-- Item 1: Wisuda Tahfidz -->
+                <div class="acc-item animate-on-scroll stagger-1" data-category="keagamaan">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#568259,#96E6B3);display:flex;align-items:center;justify-content:center;"><i class="fas fa-graduation-cap" style="font-size:48px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Keagamaan</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Wisuda Tahfidz Angkatan V</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#568259,#96E6B3);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#464E47,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#CCFCCB,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="galeri-item animate-on-scroll stagger-2">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#464E47,#568259);display:flex;align-items:center;justify-content:center;"><i class="fas fa-pray" style="font-size:40px;color:white;opacity:0.5;"></i></div>
-                    <div class="galeri-overlay"><span>Sholat Dhuha Bersama</span></div>
+
+                <!-- Item 2: Sholat Dhuha -->
+                <div class="acc-item animate-on-scroll stagger-2" data-category="keagamaan">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#464E47,#568259);display:flex;align-items:center;justify-content:center;"><i class="fas fa-pray" style="font-size:40px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Keagamaan</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Sholat Dhuha Bersama</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#464E47,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#568259,#96E6B3);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="galeri-item animate-on-scroll stagger-3">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#CCFCCB,#568259);display:flex;align-items:center;justify-content:center;"><i class="fas fa-medal" style="font-size:40px;color:white;opacity:0.5;"></i></div>
-                    <div class="galeri-overlay"><span>Pentas Seni Tahunan</span></div>
+
+                <!-- Item 3: Pentas Seni Tahunan -->
+                <div class="acc-item animate-on-scroll stagger-3" data-category="seni">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#CCFCCB,#568259);display:flex;align-items:center;justify-content:center;"><i class="fas fa-medal" style="font-size:40px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Seni & Kreativitas</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Pentas Seni Tahunan 2026</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#CCFCCB,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#568259,#464E47);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#96E6B3,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="galeri-item animate-on-scroll stagger-4">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#96E6B3,#464E47);display:flex;align-items:center;justify-content:center;"><i class="fas fa-futbol" style="font-size:40px;color:white;opacity:0.5;"></i></div>
-                    <div class="galeri-overlay"><span>Turnamen Futsal</span></div>
+
+                <!-- Item 4: Turnamen Futsal -->
+                <div class="acc-item animate-on-scroll stagger-4" data-category="olahraga">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#96E6B3,#464E47);display:flex;align-items:center;justify-content:center;"><i class="fas fa-futbol" style="font-size:40px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Olahraga</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Turnamen Futsal Antar Kelas</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#96E6B3,#464E47);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#464E47,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="galeri-item animate-on-scroll stagger-5">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#568259,#96E6B3);display:flex;align-items:center;justify-content:center;"><i class="fas fa-flask" style="font-size:40px;color:white;opacity:0.5;"></i></div>
-                    <div class="galeri-overlay"><span>Praktikum Lab IPA</span></div>
+
+                <!-- Item 5: Praktikum Lab IPA -->
+                <div class="acc-item animate-on-scroll stagger-5" data-category="akademik">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#568259,#96E6B3);display:flex;align-items:center;justify-content:center;"><i class="fas fa-flask" style="font-size:40px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Akademik</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Praktikum IPA Laboratorium</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#568259,#96E6B3);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#464E47,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#CCFCCB,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="galeri-item animate-on-scroll stagger-6">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#464E47,#CCFCCB);display:flex;align-items:center;justify-content:center;"><i class="fas fa-campground" style="font-size:40px;color:white;opacity:0.5;"></i></div>
-                    <div class="galeri-overlay"><span>Kemah Pramuka</span></div>
+
+                <!-- Item 6: Kemah Pramuka -->
+                <div class="acc-item animate-on-scroll stagger-6" data-category="kegiatan">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#464E47,#CCFCCB);display:flex;align-items:center;justify-content:center;"><i class="fas fa-campground" style="font-size:40px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Kegiatan Lainnya</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Kemah Pramuka Regu Panji</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#464E47,#CCFCCB);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#568259,#96E6B3);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="galeri-item animate-on-scroll stagger-5">
-                    <div style="width:100%;height:100%;background:linear-gradient(135deg,#568259,#464E47);display:flex;align-items:center;justify-content:center;"><i class="fas fa-quran" style="font-size:40px;color:white;opacity:0.5;"></i></div>
-                    <div class="galeri-overlay"><span>Peringatan Isra Mi'raj</span></div>
+
+                <!-- Item 7: Peringatan Isra Mi'raj -->
+                <div class="acc-item animate-on-scroll stagger-5" data-category="keagamaan">
+                    <button class="acc-trigger" onclick="toggleAccordion(this)">
+                        <div class="acc-thumb">
+                            <div class="acc-thumb-inner" style="background:linear-gradient(135deg,#568259,#464E47);display:flex;align-items:center;justify-content:center;"><i class="fas fa-quran" style="font-size:40px;color:white;opacity:0.5;"></i></div>
+                            <span class="acc-category-tag">Keagamaan</span>
+                        </div>
+                        <div class="acc-info">
+                            <h3>Peringatan Isra Mi'raj Nabi Muhammad SAW</h3>
+                        </div>
+                        <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="acc-body">
+                        <div class="acc-body-inner">
+                            <div class="acc-detail-grid">
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#568259,#464E47);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#96E6B3,#568259);"><i class="fas fa-images"></i></div>
+                                </div>
+                                <div class="acc-detail-thumb">
+                                    <div style="background:linear-gradient(135deg,#CCFCCB,#464E47);"><i class="fas fa-images"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -91,41 +265,38 @@
                 <div class="footer-brand">
                     <h3><i class="fas fa-mosque"></i> MTs AL-Munthohir</h3>
                     <p>Madrasah Tsanawiyah AL-Munthohir Kabupaten Cirebon. Mewujudkan generasi yang beriman, berilmu, berakhlak mulia, dan berprestasi.</p>
-                    <p style="font-size:13px;">
-                        <strong>NPSN:</strong> 20278858<br>
-                        <strong>Alamat:</strong> Jl. Putat-Belawa Rt 002/004, Dusun 2, Desa Putat, Kec. Sedong, Kab. Cirebon, Jawa Barat
-                    </p>
-                    <div class="footer-social">
+                    <p style="font-size:13px;"><strong>NPSN:</strong> 20278858<br><strong>Alamat:</strong> Jl. Putat-Belawa Rt 002/004, Dusun 2, Desa Putat, Kec. Sedong, Kab. Cirebon, Jawa Barat</p>
+                    <div class="fsoc">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
+                <div class="fcol">
                     <h4>Menu</h4>
                     <ul>
-                        <li><a href="#beranda">Beranda</a></li>
-                        <li><a href="#profil">Profil</a></li>
-                        <li><a href="#galeri">Galeri</a></li>
-                        <li><a href="#berita">Berita</a></li>
-                        <li><a href="#ppdb">PPDB</a></li>
-                        <li><a href="#kontak">Kontak</a></li>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="news.html">Berita</a></li>
+                        <li><a href="ppdb.html">PPDB</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="fcol">
                     <h4>Profil</h4>
                     <ul>
-                        <li><a href="#profil">Visi & Misi</a></li>
-                        <li><a href="#profil">Sejarah</a></li>
-                        <li><a href="#profil">Struktur Organisasi</a></li>
-                        <li><a href="#profil">Dewan Guru</a></li>
+                        <li><a href="profil.html">Visi & Misi</a></li>
+                        <li><a href="profil.html">Sejarah</a></li>
+                        <li><a href="profil.html">Struktur Organisasi</a></li>
+                        <li><a href="profil.html">Dewan Guru</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="fcol">
                     <h4>Layanan</h4>
                     <ul>
-                        <li><a href="#ppdb">PPDB Online</a></li>
+                        <li><a href="ppdb.html">PPDB Online</a></li>
                         <li><a href="#">E-Learning</a></li>
                         <li><a href="#">Rapor Online</a></li>
                         <li><a href="#">Blog Sekolah</a></li>
@@ -140,9 +311,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
 
     <!-- Login Modal -->
     <div class="modal-overlay" id="loginModal">
@@ -151,23 +320,141 @@
             <h2><i class="fas fa-sign-in-alt"></i> Login Admin</h2>
             <p>Masuk ke dashboard administrator</p>
             <form onsubmit="handleLogin(event)">
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" placeholder="Masukkan username" required>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" placeholder="Masukkan password" required>
-                </div>
+                <div class="fg"><label>Username</label><input type="text" placeholder="Masukkan username" required></div>
+                <div class="fg"><label>Password</label><input type="password" placeholder="Masukkan password" required></div>
                 <button type="submit" class="btn-submit"><i class="fas fa-sign-in-alt"></i> Masuk</button>
             </form>
         </div>
     </div>
 
-    <!-- Toast Notification -->
-    <div id="toast" style="position:fixed;top:24px;right:24px;background:var(--primary);color:white;padding:16px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:3000;transform:translateX(120%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;gap:10px;"></div>
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+        <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
 
-<script src="assets/js/main.js"></script>
+    <!-- Toast -->
+    <div id="toast"></div>
+
+    <script>
+        // Loader
+        window.addEventListener('load', () => { setTimeout(() => { document.getElementById('pageLoader').classList.add('hidden'); }, 800); });
+
+        // Navbar Scroll
+        const navbar = document.getElementById('exnavbar');
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 80);
+            backToTop.classList.toggle('show', window.scrollY > 400);
+        });
+
+        // Mobile Nav
+        function toggleMobileNav() {
+            const nl = document.getElementById('navLinks'), ic = document.getElementById('mobileIcon');
+            nl.classList.toggle('open');
+            ic.className = nl.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+        }
+        document.querySelectorAll('.nav-links a:not(.btn-login)').forEach(l => l.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('open');
+            document.getElementById('mobileIcon').className = 'fas fa-bars';
+        }));
+
+        // Scroll Animations
+        const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }); }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Accordion Toggle
+        function toggleAccordion(trigger) {
+            const item = trigger.closest('.acc-item');
+            const wasOpen = item.classList.contains('open');
+
+            // Close all items
+            document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+
+            // Open clicked item if it wasn't already open
+            if (!wasOpen) {
+                item.classList.add('open');
+            }
+        }
+
+        // Filter Gallery
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.acc-item');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach((item, index) => {
+                const itemCat = item.dataset.category;
+                const shouldShow = category === 'all' || itemCat === category;
+
+                item.style.transition = 'opacity 0.3s, transform 0.3s, max-height 0.5s';
+                if (shouldShow) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                    item.style.display = '';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => { item.style.display = 'none'; }, 300);
+                }
+            });
+        }
+
+        // Lightbox
+        let currentLightboxImage = null;
+        function openLightbox(color1, color2, title) {
+            const overlay = document.getElementById('lightboxOverlay');
+            const content = document.getElementById('lightboxContent');
+            content.innerHTML = `<div style="width:70vw;height:60vh;border-radius:16px;background:linear-gradient(135deg,${color1},${color2});display:flex;align-items:center;justify-content:center;flex-direction:column;">
+                <i class="fas fa-image" style="font-size:80px;color:white;opacity:0.3;margin-bottom:16px;"></i>
+                <p style="color:white;font-size:18px;font-weight:600;">${title}</p>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-top:8px;">Gambar akan ditampilkan di sini</p>
+            </div>`;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightboxOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function navLightbox(dir) {}
+
+        // Modal
+        function openModal(e) { e.preventDefault(); document.getElementById('loginModal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeModal() { document.getElementById('loginModal').classList.remove('active'); document.body.style.overflow = ''; }
+        document.getElementById('loginModal').addEventListener('click', e => { if (e.target === document.getElementById('loginModal')) closeModal(); });
+
+        // Toast
+        function showToast(msg, icon = 'fa-check-circle') {
+            const toast = document.getElementById('toast');
+            toast.innerHTML = `<i class="fas ${icon}"></i> ${msg}`;
+            toast.style.transform = 'translateX(0)';
+            setTimeout(() => { toast.style.transform = 'translateX(120%)'; }, 3000);
+        }
+
+        function handleLogin(e) { e.preventDefault(); closeModal(); showToast('Login berhasil! Mengalihkan ke dashboard...', 'fa-sign-in-alt'); }
+
+        // Keyboard events
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeLightbox();
+            }
+        });
+
+        // Initial trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('vis');
+                });
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
 

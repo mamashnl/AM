@@ -34,9 +34,7 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        #exnavbar {
-            background: var(--navbar);
-        }
+        
 
         .navbar.scrolled {
             background: var(--navbar);
@@ -113,7 +111,7 @@
             position: relative;
         }
 
-        .navbar.scrolled .nav-links a { color: var(--dark); }
+        .navbar.scrolled .nav-links a { color: var(--main-bg); }
 
         .nav-links.open {
             flex-direction: column;
@@ -128,8 +126,8 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            background: var(--accent);
-            color: var(--primary);
+            background: var(--primary);
+            color: var(--accent);
         }
 
         .nav-links .btn-login {

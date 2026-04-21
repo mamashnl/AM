@@ -124,7 +124,7 @@
             position: relative;
         }
 
-        .navbar.scrolled .nav-links a { color: var(--dark); }
+        .navbar.scrolled .nav-links a { color: var(--accent); }
 
         .nav-links.open {
             flex-direction: column;
@@ -139,8 +139,8 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            background: var(--accent);
-            color: var(--primary);
+            background: var(--primary);
+            color: var(--accent);
         }
 
         .nav-links .btn-login {
