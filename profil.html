@@ -120,39 +120,108 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Struktur Organisasi -->
+            <!-- Struktur Organisasi (PERFECTLY CONNECTED) -->
             <div class="profil-content" id="tab-struktur">
-                <div class="struktur-grid">
-                    <div class="struktur-card animate-on-scroll stagger-1">
-                        <div class="struktur-avatar"><i class="fas fa-user-tie"></i></div>
-                        <h4>Agung Oktriadi, S.S</h4>
-                        <span>Kepala Madrasah</span>
-                    </div>
-                    <div class="struktur-card animate-on-scroll stagger-2">
-                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
-                        <h4>Dudi Ahmad, S.Pd</h4>
-                        <span>Wakil Kepala Kurikulum</span>
-                    </div>
-                    <div class="struktur-card animate-on-scroll stagger-3">
-                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
-                        <h4>Siti Rahmawati, S.Pd</h4>
-                        <span>Wakil Kepala Kesiswaan</span>
-                    </div>
-                    <div class="struktur-card animate-on-scroll stagger-4">
-                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
-                        <h4>Bambang Supriyadi, S.Pd</h4>
-                        <span>Wakil Kepala Sarana</span>
-                    </div>
-                    <div class="struktur-card animate-on-scroll stagger-5">
-                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
-                        <h4>Nur Halimah, S.Pd</h4>
-                        <span>Kepala Tata Usaha</span>
-                    </div>
-                    <div class="struktur-card animate-on-scroll stagger-6">
-                        <div class="struktur-avatar"><i class="fas fa-user"></i></div>
-                        <h4>Eko Prasetyo, S.Pd</h4>
-                        <span>Koordinator Litbang</span>
+                <p style="text-align:center;font-size:13px;color:var(--dark);opacity:0.5;margin-bottom:16px;" class="animate-on-scroll">Geser horizontal pada perangkat kecil untuk melihat seluruh struktur dengan rapi</p>
+                <div class="org-wrapper">
+                    <div class="org-chart">
+                        <!-- ROW 0: Majelis + Kepala -->
+                        <div class="org-row">
+                            <!-- <div class="org-col">
+                                <div class="org-box dashed">
+                                    <div class="org-title">Majelis<br>Madrasah</div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="line-dotted"></div> -->
+                            <div class="org-col">
+                                <div class="org-box main-header">
+                                    <div class="org-title">Kepala Madrasah</div>
+                                    <div class="org-name">Agung Oktriadi, S.S</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- V Line Down -->
+                        <div class="line-v"></div>
+                        <div class="line-h-full"></div>
+
+                        <!-- ROW 1: TU | Waka Kur | Waka Kes -->
+                        <div class="org-row">
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box">Tata Usaha</div>
+                                <!-- <div class="line-v-box"></div> -->
+                            </div>
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box">
+                                    <div class="org-title">Waka Bidang<br>Kurikulum</div>
+                                    <div class="org-name small">Asroni, S.Pd.I</div>
+                                </div>
+                                <div class="line-v-short"></div>
+                                <div class="org-box small">
+                                    <div class="org-title">Kepala Perpustakaan</div>
+                                    <div class="org-name small">Sadiah, S.Ag</div>
+                                </div>
+                            </div>
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box">
+                                    <div class="org-title">Waka Bidang<br>Kesiswaan</div>
+                                    <div class="org-name small">Debi Maolana Akbar, S.Pd.I</div>
+                                </div>
+                                <div class="line-v-box"></div>
+                            </div>
+                        </div>
+
+                        <!-- H LINE BOTTOM -->
+                        <div class="spacer"></div>
+                        <div class="line-h-full"></div>
+                        <div class="spacer"></div>
+
+                        <!-- ROW 2: Bottom Row -->
+                        <div class="org-row">
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box">
+                                    <div class="org-title">Staff TU</div>
+                                    <div class="org-name small">Jasran</div>
+                                </div>
+                            </div>
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box">
+                                    <div class="org-title">Bendahara</div>
+                                    <div class="org-name small">Siti Solihah,<br>S.Pd.I</div>
+                                </div>
+                            </div>
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box table-inner">
+                                    <div class="org-title">Guru Pembina</div>
+                                    <table class="sub-table">
+                                        <tr><td colspan="2">Ekstrakurikuler</td></tr>
+                                        <tr><td>OSIS</td><td>Runika, S.Pd</td></tr>
+                                        <tr><td>Pramuka</td><td>Nur Hidayat</td></tr>
+                                        <tr><td>Paskibra</td><td>-</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="org-col">
+                                <div class="line-v-short"></div>
+                                <div class="org-box table-inner">
+                                    <div class="org-title">Wali Kelas</div>
+                                    <table class="sub-table">
+                                        <tr><td colspan="2">Kelas</td></tr>
+                                        <tr><td>VII A</td><td>Suhaeni, S.Pd</td></tr>
+                                        <tr><td>VIII A</td><td>Rosmala, S.Pd</td></tr>
+                                        <tr><td>VIII B</td><td>Siti Solihah, S.Pdi</td></tr>
+                                        <tr><td>IX A</td><td>Anggi Krisma Diana, S.Pd</td></tr>
+                                        <tr><td>IX B</td><td>Siti Masiroh, S.PdI</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,7 +240,7 @@
                         <span>Prakarya</span>
                     </div>
                     <div class="struktur-card animate-on-scroll stagger-3">
-                        <img src="assets/images/ASRONI.png" class="guru-img" alt="" srcset="">
+                        <img src="assets/images/ANGGI_KRISMA_DIANA.png" class="guru-img" alt="" srcset="">
                         <h4>Anggi Krisma Diana, S.Pd</h4>
                         <span>Bahasa Indonesia</span>
                     </div>
@@ -181,9 +250,19 @@
                         <span>Matematika</span>
                     </div>
                     <div class="struktur-card animate-on-scroll stagger-4">
-                        <img src="assets/images/sitisolehah.png" class="guru-img" alt="" srcset="">
+                        <img src="assets/images/SITI_SOLIHAH.png" class="guru-img" alt="" srcset="">
                         <h4>Siti Solihah, S.Pd.I</h4>
-                        <span>Matematika</span>
+                        <span>SKI</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-4">
+                        <img src="assets/images/NINA_ALLIZHA_LUCHIANA.png" class="guru-img" alt="" srcset="">
+                        <h4>Nina Allizha Luchiana, S.Pd</h4>
+                        <span>PPKN</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-4">
+                        <img src="assets/images/INA_NURUL_ALFIA.png" class="guru-img" alt="" srcset="">
+                        <h4>Ina Nurul Alfia, S.Pd</h4>
+                        <span>IPS</span>
                     </div>
                     <div class="struktur-card animate-on-scroll stagger-5">
                         <img src="assets/images/SADIAH.png" class="guru-img" alt="" srcset="">
@@ -209,6 +288,11 @@
                         <img src="assets/images/VERA_TARMILAH.png" class="guru-img" alt="" srcset="">
                         <h4>Vera Tarmilah, S.Hum</h4>
                         <span>Bahasa Arab</span>
+                    </div>
+                    <div class="struktur-card animate-on-scroll stagger-6">
+                        <img src="assets/images/JASAN.png" class="guru-img" alt="" srcset="">
+                        <h4>Jasan, S.Pd</h4>
+                        <span>Informatika</span>
                     </div>
                 </div>
             </div>
