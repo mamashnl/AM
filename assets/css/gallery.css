@@ -171,7 +171,7 @@
         .acc-body {
             max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .acc-item.open .acc-body { max-height: 600px; }
+        .acc-item.open .acc-body { max-height: none; }
         .acc-body-inner {
             padding: 28px 28px; border-top: 1px solid rgba(70,78,71,0.08);
             margin-top: 0;

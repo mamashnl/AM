@@ -519,7 +519,7 @@
 
         .sambutan-photo-img {
             width: 100%;
-            aspect-ratio: 3/4;
+            aspect-ratio: 1/1;
             border-radius: 24px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
@@ -663,7 +663,7 @@
         }
 
         .ekskul-card {
-            background: var(--white);
+            /* background: var(--white); */
             border-radius: 20px;
             padding: 32px 24px;
             text-align: center;
@@ -677,30 +677,21 @@
             transform: translateY(-6px);
         }
 
-        .ekskul-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 24px;
-            color: white;
+        .ekskul-card:hover h4, .ekskul-card:hover p {
+            opacity: 1 !important;
+            z-index: 999;
         }
 
         .ekskul-card h4 {
-            font-size: 16px;
+            font-size: 30px;
             font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 8px;
+            color: var(--main-bg);
+            margin-bottom: 18px;
         }
 
         .ekskul-card p {
-            font-size: 13px;
-            color: var(--dark);
-            opacity: 0.6;
+            font-size: 18px;
+            color: var(--white);
             line-height: 1.6;
         }
 
